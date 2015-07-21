@@ -1,0 +1,1 @@
+default: python ./partis/bin/partis.py --action cache-parameters --seqfile ${SEQFILE} --is-data --skip-unproductive --parameter-dir ${PARAMETER_DIR} && python ./partis/bin/partis.py --action simulate --outfname ${OUTFNAME} --parameter-dir ${SIM_PARAMETER_DIR} --n-max-queries ${N_MAX_QUERIES}

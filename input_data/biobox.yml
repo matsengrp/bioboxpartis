@@ -1,0 +1,10 @@
+cacheparameters:
+  isdata: true
+  parameterdir: _output/example/data
+  plotdir: _plots/example
+  seqfile: test/A-every-100-subset-0.tsv.bz2
+  skipunproductive: true
+simulate:
+  nmaxqueries: '10'
+  outfname: _output/example/simu.csv
+  parameterdir: _output/example/data/hmm
