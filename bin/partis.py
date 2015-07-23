@@ -93,7 +93,7 @@ if len(args.n_procs) == 1:
 else:
     args.n_fewer_procs = args.n_procs[1]
 args.n_procs = args.n_procs[0]
-print(args.slurm)
+
 if args.slurm and '/tmp' in args.workdir:
     print 'ERROR it appears that <workdir> isn\'t set to something visible to all slurm nodes'
     sys.exit()

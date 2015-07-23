@@ -1,10 +1,10 @@
 cacheparameters:
   isdata: true
-  parameterdir: __output/example/data
+  parameterdir: output_data/_output/example/data
   plotdir: _plots/example
-  seqfile: input_data/A-subset-200.tsv
+  seqfile: test/A-subset-200.tsv
   skipunproductive: true
 simulate:
   nmaxqueries: '10'
-  outfname: __output/example/simu.csv
-  parameterdir: __output/example/data/hmm
+  outfname: output_data/_output/example/simu.csv
+  parameterdir: output_data/_output/example/data/hmm

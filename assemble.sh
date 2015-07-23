@@ -73,7 +73,7 @@ cat << EOF > ${OUTPUT}/biobox.yaml
 arguments:
   - csv:
     - id: partis_test
-      value: simulate.csv
+      value: simu.csv
       type: csv
 EOF
 
