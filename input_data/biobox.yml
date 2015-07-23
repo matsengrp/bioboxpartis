@@ -1,13 +1,13 @@
 cacheparameters:
   isdata: true
-  parameterdir: /bbx/output/_output/example/data
+  parameterdir: /bbx/_output/example/data
   plotdir: _plots/example
   seqfile: test/A-subset-200.tsv
   skipunproductive: true
-run-forward:
+runviterbi:
   debug: '1'
   isdata: true
   nbestevents: '5'
   nmaxqueries: '1'
-  parameterdir: /bbx/output/_output/example/data
+  parameterdir: /bbx/_output/example/data
   seqfile: test/A-subset-200.tsv

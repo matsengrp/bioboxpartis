@@ -29,7 +29,7 @@ def main():
 	output['cacheparameters']['parameterdir'] = parameter_dir
 	output['cacheparameters']['plotdir'] = plotdir
 
-	action = raw_input("Enter the final action (simulate, run-viterbi, run-forward): ")
+	action = raw_input("Enter the final action (simulate, runviterbi, runforward): ")
 
 	if action == 'simulate':
 		outfname = raw_input('Enter the name of the output file (i.e. /bbx/output/_output/example/simu.csv): ')
@@ -41,7 +41,7 @@ def main():
 		output['simulate']['parameterdir'] = parameter_dir
 		output['simulate']['nmaxqueries'] = n_max_queries
 
-	elif action == 'run-viterbi':
+	elif action == 'runviterbi':
 		#seqfile = raw_input('Enter the location of your input sequential text file (i.e. test/A-subset-200.tsv): ')
 		#is_data = query_yes_no('Set is_data to true?"')
 		#parameter_dir = raw_input('Enter the location of the parameter directory (i.e. /bbx/output/_output/example/data): ') 
@@ -49,15 +49,15 @@ def main():
 		n_max_queries = raw_input('Enter n_max_queries (i.e. 1): ')
 		debug = raw_input('Enter the debug level (i.e. 1): ')
 
-		output['run-viterbi'] = {}
-		output['run-viterbi']['seqfile'] = seqfile
-		output['run-viterbi']['isdata'] = is_data
-		output['run-viterbi']['parameterdir'] = parameter_dir
-		output['run-viterbi']['nbestevents'] = n_best_events
-		output['run-viterbi']['nmaxqueries'] = n_max_queries
-		output['run-viterbi']['debug'] = debug
+		output['runviterbi'] = {}
+		output['runviterbi']['seqfile'] = seqfile
+		output['runviterbi']['isdata'] = is_data
+		output['runviterbi']['parameterdir'] = parameter_dir
+		output['runviterbi']['nbestevents'] = n_best_events
+		output['runviterbi']['nmaxqueries'] = n_max_queries
+		output['runviterbi']['debug'] = debug
 
-	elif action == 'run-forward':
+	elif action == 'runforward':
 		#seqfile = raw_input('Enter the location of your input sequential text file (i.e. test/A-subset-200.tsv): ')
 		#is_data = query_yes_no('Set is_data to true?"')
 		#parameter_dir = raw_input('Enter the location of the parameter directory (i.e. /bbx/output/_output/example/data): ') 
@@ -65,13 +65,13 @@ def main():
 		n_max_queries = raw_input('Enter n_max_queries (i.e. 1): ')
 		debug = raw_input('Enter the debug level (i.e. 1): ')
 
-		output['run-forward'] = {}
-		output['run-forward']['seqfile'] = seqfile
-		output['run-forward']['isdata'] = is_data
-		output['run-forward']['parameterdir'] = parameter_dir
-		output['run-forward']['nbestevents'] = n_best_events
-		output['run-forward']['nmaxqueries'] = n_max_queries
-		output['run-forward']['debug'] = debug
+		output['runforward'] = {}
+		output['runforward']['seqfile'] = seqfile
+		output['runforward']['isdata'] = is_data
+		output['runforward']['parameterdir'] = parameter_dir
+		output['runforward']['nbestevents'] = n_best_events
+		output['runforward']['nmaxqueries'] = n_max_queries
+		output['runforward']['debug'] = debug
 
 	with open('biobox.yml', 'w') as f:
 		f.write(yaml.dump(output, default_flow_style=False))

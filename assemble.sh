@@ -6,7 +6,6 @@ set -o errexit
 # exit script if Variable is not set
 set -o nounset
 
-#INPUT=/bbx/input/biobox.yml
 INPUT=/bbx/input/biobox.yml
 OUTPUT=/bbx/output
 METADATA=/bbx/metadata
@@ -19,38 +18,123 @@ TASK=$1
 # TBD
 
 mkdir -p ${OUTPUT}
-
+# =====================================
 # Parse the yaml file, read partis subparameters
-
 # include parse_yaml function
-. parse_yaml.sh
- 
+. parse_yaml.sh 
 # read yaml file
 eval $(parse_yaml $INPUT "partis_")
- 
-# access yaml content
 
+# Access yaml content
+# get parameters for "cache-parameters"
 IS_DATA=$partis_cacheparameters_isdata
 PARAMETER_DIR=$partis_cacheparameters_parameterdir
 PLOTDIR=$partis_cacheparameters_plotdir
 SEQFILE=$partis_cacheparameters_seqfile
 SKIP_UNPRODUCTIVE=$partis_cacheparameters_skipunproductive
-
-N_MAX_QUERIES=$partis_simulate_nmaxqueries
-OUTFNAME=$partis_simulate_outfname
-SIM_PARAMETER_DIR=$partis_simulate_parameterdir
-
 echo "=== parameters read from yaml ==="
+echo "CACHE PARAMETERS"
 echo $IS_DATA
 echo $PARAMETER_DIR
 echo $PLOTDIR
 echo $SEQFILE
 echo $SKIP_UNPRODUCTIVE
-
-echo $N_MAX_QUERIES
-echo $OUTFNAME
-echo $SIM_PARAMETER_DIR
+#if simulate, elif run-viterbi, elif run-forward
+if [[ -n $partis_simulate ]]; then
+	#statements
+	N_MAX_QUERIES=$partis_simulate_nmaxqueries
+	OUTFNAME=$partis_simulate_outfname
+	SIM_PARAMETER_DIR=$partis_simulate_parameterdir
+	echo $N_MAX_QUERIES
+	echo $OUTFNAME
+	echo$SIM_PARAMETER_DIR
+	cat << EOF > ${OUTPUT}/biobox.yml
+		project: bioboxpartis
+		action: simulate
+		output file name: ${OUTFNAME}
+	EOF
+elif [[ -n $partis_runviterbi ]]; then
+	#statements
+	SEQFILERV=$partis_runviterbi_seqfile
+	IS_DATARV=$partis_runviterbi_isdata
+	PARAMETER_DIRRV=$partis_runviterbi_parameterdir
+	N_BEST_EVENTSRV=$partis_runviterbi_nbestevents
+	N_MAX_QUERIESRV=$partis_runviterbi_nmaxqueries
+	DEBUGRV=$partis_runviterbi_debug
+	OUTFNAMERV=$partis_runviterbi_outfname
+	echo $SEQFILERV
+	echo $IS_DATARV
+	echo $PARAMETER_DIRRV
+	echo $N_BEST_EVENTSRV
+	echo $N_MAX_QUERIESRV
+	echo $DEBUGRV
+	echo $OUTFNAMERV
+	cat << EOF > ${OUTPUT}/biobox.yml
+		project: bioboxpartis
+		action: runviterbi
+		output file name: ${OUTFNAMERV}
+	EOF
+elif [[ -n $partis_runforward ]]; then
+	#statements
+	SEQFILERF=$partis_runforward_seqfile
+	IS_DATARF=$partis_runforward_isdata
+	PARAMETER_DIRRF=$partis_runforward_parameterdir
+	N_BEST_EVENTSRF=$partis_runforward_nbestevents
+	N_MAX_QUERIESRF=$partis_runforward_nmaxqueries
+	DEBUGRF=$partis_runforward_debug
+	OUTFNAMEF=$partis_runforward_outfname
+	echo $SEQFILERF
+	echo $IS_DATARF
+	echo $PARAMETER_DIRRF
+	echo $N_BEST_EVENTSRF
+	echo $N_MAX_QUERIESRF
+	echo $DEBUGRF
+	echo $OUTFNAMERF
+	cat << EOF > ${OUTPUT}/biobox.yml
+		project: bioboxpartis
+		action: runforward
+		output file name: ${OUTFNAMERF}
+	EOF
+else 
+	cat << EOF > ${OUTPUT}/biobox.yml
+                project: bioboxpartis
+                action: default
+        EOF
+fi
 echo "================================="
+#if action is simulate
+#if [[ condition ]]; then
+	#statements
+# fi
+# N_MAX_QUERIES=$partis_simulate_nmaxqueries
+# OUTFNAME=$partis_simulate_outfname
+# SIM_PARAMETER_DIR=$partis_simulate_parameterdir
+# # --------
+# # else if action is run-viterbi
+# if [[ condition ]]; then
+# 	#statements
+# fi
+# SEQFILE=$partis_runviterbi_seqfile
+# IS_DATA=$partis_runviterbi_isdata
+# PARAMETER_DIR=$partis_runviterbi_parameterdir
+# N_BEST_EVENTS=$partis_runviterbi_nbestevents
+# N_MAX_QUERIES=$partis_runviterbi_nmaxqueries
+# DEBUG=$partis_runviterbi_debug
+# OUTFNAME=$partis_runviterbi_outfname
+# # --------
+# # else if action is run-forward
+# if [[ condition ]]; then
+# 	#statements
+# fi
+# SEQFILE=$partis_runforward_seqfile
+# IS_DATA=$partis_runforward_isdata
+# PARAMETER_DIR=$partis_runforward_parameterdir
+# N_BEST_EVENTS=$partis_runforward_nbestevents
+# N_MAX_QUERIES=$partis_runforward_nmaxqueries
+# DEBUG=$partis_runforward_debug
+# OUTFNAME=$partis_runforward_outfname
+# --------
+# =====================================
 
 # Use grep to get $TASK in /Taskfile
 CMD=$(egrep ^${TASK}: /Taskfile | cut -f 2 -d ':')
@@ -68,12 +152,5 @@ fi
 # Eval evaluates a String as if you would use it on a command line.
 eval ${CMD}
 
-
-cat << EOF > ${OUTPUT}/biobox.yaml
-arguments:
-  - csv:
-    - id: partis_test
-      value: simu.csv
-      type: csv
-EOF
+echo "Process completed"
 
