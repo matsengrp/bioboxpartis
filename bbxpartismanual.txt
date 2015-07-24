@@ -1,27 +1,15 @@
 MANUAL FOR BIOBOX CONTAINING PROJECT PARTIS
+#7-24-15
 
-Make sure you have the following files/directories: 
-assemble.sh (file)
-parse_yaml.sh (file)
-Taskfile (file)
-input_data (directory): inputfile, YamlFileGenerator.py
-
-1. Git clone the partis project (git repository is here: https://github.com/psathyrella/partis).
-2. Place all the files mentioned before into the main partis directory
-3. Run YamlFileGenerator.py and enter in the parameters. Make sure the generated yaml file is inside of the input_data directory.
-4. Copy the input data file into the 'input_data' directory.
-5. Build the docker image from the docker file (docker build -t <name of image> .)
-6. Run this docker command: docker run --volume="$(pwd)/input_data:/bbx/input:ro" --volume="$(pwd)/output_data:/bbx/output:rw" <name of image> <task>
+1. Git clone this repository: https://github.com/matsengrp/bioboxpartis
+2. Navigate into the input_data directory and run YamlFileGenerator.py. Here you will enter all the parameters for generating the input. Make sure the resulting file (biobox.yml) is in the input_data directory. 
+3. Navigate back to the main directory and build the docker image from the docker file "docker build -t <name of image> ."
+4. Now you will actually run the program using this docker command: docker run --volume="$(pwd)/input_data:/bbx/input:ro" --volume="$(pwd)/output_data:/bbx/output:rw" <name of image> <task>
 
 You should now see the output files in the directory you specified. 
 
-Potential problems:
-Import error with yaml:
-This means that you do not have the python yaml module installed on your machine. 
+Caution: 
+-Make sure the task you specified in the docker run command is the same as the one in the input biobox yaml file. 
+-You must have docker installed to run this program. 
 
-Permission denied errors:
-Navigate to the directories/files mentioned through the command line and enter the command: "chmod +x *"
 
-Make sure the task you specified in the docker command is the same as the one you specified when you generated the input yaml file. 
-
-1. Git clone this repository: 
