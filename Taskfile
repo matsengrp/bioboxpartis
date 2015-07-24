@@ -1,11 +1,7 @@
-default: 
-source ./bin/handbuild.sh && python ./bin/partis.py --action cache-parameters --seqfile ${SEQFILE} --is-data --skip-unproductive --parameter-dir ${PARAMETER_DIR}
+default: source ./bin/handbuild.sh && python ./bin/partis.py --action cache-parameters --seqfile ${SEQFILE} --is-data --skip-unproductive --parameter-dir ${PARAMETER_DIR} --plotdir ${PLOTDIR}
 
-simulate: 
-source ./bin/handbuild.sh && python ./bin/partis.py --action cache-parameters --seqfile ${SEQFILE} --is-data --skip-unproductive --parameter-dir ${PARAMETER_DIR} && python ./bin/partis.py --action simulate --outfname ${OUTFNAME} --parameter-dir ${SIM_PARAMETER_DIR} --n-max-queries ${N_MAX_QUERIES}
+simulate: source ./bin/handbuild.sh && python ./bin/partis.py --action cache-parameters --seqfile ${SEQFILE} --is-data --skip-unproductive --parameter-dir ${PARAMETER_DIR} --plotdir ${PLOTDIR} && python ./bin/partis.py --action simulate --outfname ${OUTFNAME} --parameter-dir ${SIM_PARAMETER_DIR} --n-max-queries ${N_MAX_QUERIES}
 
-run-viterbi:
-source ./bin/handbuild.sh && python ./bin/partis.py --action cache-parameters --seqfile ${SEQFILE} --is-data --skip-unproductive --parameter-dir ${PARAMETER_DIR} && ./bin/partis.py --action run-viterbi --seqfile ${SEQFILERV} --is-data --parameter-dir ${PARAMETER_DIRRV} --n-best-events ${N_BEST_EVENTSRV} --n-max-queries ${N_MAX_QUERIESRV} --debug ${DEBUGRV} --outfname ${OUTFNAMERV}
+runviterbi: source ./bin/handbuild.sh && python ./bin/partis.py --action cache-parameters --seqfile ${SEQFILE} --is-data --skip-unproductive --parameter-dir ${PARAMETER_DIR} --plotdir ${PLOTDIR} && ./bin/partis.py --action run-viterbi --seqfile ${SEQFILERV} --is-data --parameter-dir ${PARAMETER_DIRRV} --n-best-events ${N_BEST_EVENTSRV} --n-max-queries ${N_MAX_QUERIESRV} --debug ${DEBUGRV} --outfname ${OUTFNAMERV}
 
-run-forward:
-source ./bin/handbuild.sh && python ./bin/partis.py --action cache-parameters --seqfile ${SEQFILE} --is-data --skip-unproductive --parameter-dir ${PARAMETER_DIR} && ./bin/partis.py --action run-viterbi --seqfile ${SEQFILERF} --is-data --parameter-dir ${PARAMETER_DIRRF} --n-best-events ${N_BEST_EVENTSRF} --n-max-queries ${N_MAX_QUERIESRF} --debug ${DEBUGRF} --outfname ${OUTFNAMERF}
+runforward: source ./bin/handbuild.sh && python ./bin/partis.py --action cache-parameters --seqfile ${SEQFILE} --is-data --skip-unproductive --parameter-dir ${PARAMETER_DIR} --plotdir ${PLOTDIR} && ./bin/partis.py --action run-forward --seqfile ${SEQFILERF} --is-data --parameter-dir ${PARAMETER_DIRRF} --n-best-events ${N_BEST_EVENTSRF} --n-max-queries ${N_MAX_QUERIESRF} --debug ${DEBUGRF} --outfname ${OUTFNAMERF}

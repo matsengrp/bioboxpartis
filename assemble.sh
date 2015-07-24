@@ -27,18 +27,18 @@ eval $(parse_yaml $INPUT "partis_")
 
 # Access yaml content
 # get parameters for "cache-parameters"
-#IS_DATA=$partis_cacheparameters_isdata
+IS_DATA=$partis_cacheparameters_isdata
 PARAMETER_DIR=$partis_cacheparameters_parameterdir
 PLOTDIR=$partis_cacheparameters_plotdir
 SEQFILE=$partis_cacheparameters_seqfile
-#SKIP_UNPRODUCTIVE=$partis_cacheparameters_skipunproductive
+SKIP_UNPRODUCTIVE=$partis_cacheparameters_skipunproductive
 echo "=== parameters read from yaml ==="
 echo "CACHE PARAMETERS"
-#echo $IS_DATA
+echo $IS_DATA
 echo $PARAMETER_DIR
 echo $PLOTDIR
 echo $SEQFILE
-#echo $SKIP_UNPRODUCTIVE
+echo $SKIP_UNPRODUCTIVE
 #if simulate, elif run-viterbi, elif run-forward
 if grep -q simulate "$INPUT" ; then
 	#statements
@@ -56,7 +56,7 @@ if grep -q simulate "$INPUT" ; then
 elif grep -q runviterbi "$INPUT"; then
 	#statements
 	SEQFILERV=$partis_runviterbi_seqfile
-	#IS_DATARV=$partis_runviterbi_isdata
+	IS_DATARV=$partis_runviterbi_isdata
 	PARAMETER_DIRRV=$partis_runviterbi_parameterdir
 	N_BEST_EVENTSRV=$partis_runviterbi_nbestevents
 	N_MAX_QUERIESRV=$partis_runviterbi_nmaxqueries
@@ -77,14 +77,14 @@ elif grep -q runviterbi "$INPUT"; then
 elif grep -q runforward "$INPUT"; then
 	#statements
 	SEQFILERF=$partis_runforward_seqfile
-	#IS_DATARF=$partis_runforward_isdata
+	IS_DATARF=$partis_runforward_isdata
 	PARAMETER_DIRRF=$partis_runforward_parameterdir
 	N_BEST_EVENTSRF=$partis_runforward_nbestevents
 	N_MAX_QUERIESRF=$partis_runforward_nmaxqueries
 	DEBUGRF=$partis_runforward_debug
 	OUTFNAMEF=$partis_runforward_outfname
 	echo $SEQFILERF
-	#echo $IS_DATARF
+	echo $IS_DATARF
 	echo $PARAMETER_DIRRF
 	echo $N_BEST_EVENTSRF
 	echo $N_MAX_QUERIESRF
@@ -102,39 +102,7 @@ elif grep -q runforward "$INPUT"; then
 #         EOF
 fi
 echo "================================="
-#if action is simulate
-#if [[ condition ]]; then
-	#statements
-# fi
-# N_MAX_QUERIES=$partis_simulate_nmaxqueries
-# OUTFNAME=$partis_simulate_outfname
-# SIM_PARAMETER_DIR=$partis_simulate_parameterdir
-# # --------
-# # else if action is run-viterbi
-# if [[ condition ]]; then
-# 	#statements
-# fi
-# SEQFILE=$partis_runviterbi_seqfile
-# IS_DATA=$partis_runviterbi_isdata
-# PARAMETER_DIR=$partis_runviterbi_parameterdir
-# N_BEST_EVENTS=$partis_runviterbi_nbestevents
-# N_MAX_QUERIES=$partis_runviterbi_nmaxqueries
-# DEBUG=$partis_runviterbi_debug
-# OUTFNAME=$partis_runviterbi_outfname
-# # --------
-# # else if action is run-forward
-# if [[ condition ]]; then
-# 	#statements
-# fi
-# SEQFILE=$partis_runforward_seqfile
-# IS_DATA=$partis_runforward_isdata
-# PARAMETER_DIR=$partis_runforward_parameterdir
-# N_BEST_EVENTS=$partis_runforward_nbestevents
-# N_MAX_QUERIES=$partis_runforward_nmaxqueries
-# DEBUG=$partis_runforward_debug
-# OUTFNAME=$partis_runforward_outfname
-# --------
-# =====================================
+
 
 # Use grep to get $TASK in /Taskfile
 CMD=$(egrep ^${TASK}: /Taskfile | cut -f 2 -d ':')

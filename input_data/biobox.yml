@@ -1,11 +1,10 @@
 cacheparameters:
-  parameterdir: /bbx/_output/example/data
-  plotdir: _plots/example
-  seqfile: test/A-subset-200.tsv
-runviterbi:
-  debug: '1'
-  nbestevents: '5'
-  nmaxqueries: '1'
-  outfname: test/viterbi.csv
-  parameterdir: /bbx/_output/example/data
-  seqfile: test/A-subset-200.tsv
+  isdata: true
+  parameterdir: /bbx/output/_output/example/data
+  plotdir: /bbx/output/_plots/example
+  seqfile: ./test/A-subset-200.tsv
+  skipunproductive: true
+simulate:
+  nmaxqueries: '10'
+  outfname: /bbx/output/_output/example/simu.csv
+  parameterdir: /bbx/output/_output/example/data/hmm
