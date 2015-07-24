@@ -48,6 +48,7 @@ def main():
 		n_best_events = raw_input('Enter n_best_envets (i.e. 5): ')
 		n_max_queries = raw_input('Enter n_max_queries (i.e. 1): ')
 		debug = raw_input('Enter the debug level (i.e. 1): ')
+		outfname = raw_input('Enter the name of the output file (i.e. test/viterbi.csv): ')
 
 		output['runviterbi'] = {}
 		output['runviterbi']['seqfile'] = seqfile
@@ -56,6 +57,7 @@ def main():
 		output['runviterbi']['nbestevents'] = n_best_events
 		output['runviterbi']['nmaxqueries'] = n_max_queries
 		output['runviterbi']['debug'] = debug
+		output['runviterbi']['outfname'] = outfname
 
 	elif action == 'runforward':
 		#seqfile = raw_input('Enter the location of your input sequential text file (i.e. test/A-subset-200.tsv): ')
@@ -64,6 +66,7 @@ def main():
 		n_best_events = raw_input('Enter n_best_events (i.e. 5): ')
 		n_max_queries = raw_input('Enter n_max_queries (i.e. 1): ')
 		debug = raw_input('Enter the debug level (i.e. 1): ')
+		outfname = raw_input('Enter the name of the output file (i.e. test/forward.csv): ')
 
 		output['runforward'] = {}
 		output['runforward']['seqfile'] = seqfile
@@ -72,6 +75,7 @@ def main():
 		output['runforward']['nbestevents'] = n_best_events
 		output['runforward']['nmaxqueries'] = n_max_queries
 		output['runforward']['debug'] = debug
+		output['runviterbi']['outfname'] = outfname
 
 	with open('biobox.yml', 'w') as f:
 		f.write(yaml.dump(output, default_flow_style=False))
