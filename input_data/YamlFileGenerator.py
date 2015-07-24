@@ -18,14 +18,14 @@ def main():
 
 	print "Enter sub parameters for intermediate action- \"cache-parameters:\"\n"
 	seqfile = raw_input('Enter the location of your input sequential text file (i.e. test/A-subset-200.tsv): ')
-	is_data = query_yes_no("Set is-data to true?: ") 
-	skip_unproductive = query_yes_no("Set skip_unproductive to true?: ") 
+	#is_data = query_yes_no("Set is-data to true?: ") 
+	#skip_unproductive = query_yes_no("Set skip_unproductive to true?: ") 
 	parameter_dir = raw_input('Enter the location of the parameter directory (i.e. /bbx/output/_output/example/data): ') 
 	plotdir = raw_input('Enter the location of the plot directory (i.e. _plots/example): ')
 
 	output['cacheparameters']['seqfile'] = seqfile
-	output['cacheparameters']['isdata'] = is_data
-	output['cacheparameters']['skipunproductive'] = skip_unproductive
+	#output['cacheparameters']['isdata'] = is_data
+	#output['cacheparameters']['skipunproductive'] = skip_unproductive
 	output['cacheparameters']['parameterdir'] = parameter_dir
 	output['cacheparameters']['plotdir'] = plotdir
 
@@ -51,7 +51,7 @@ def main():
 
 		output['runviterbi'] = {}
 		output['runviterbi']['seqfile'] = seqfile
-		output['runviterbi']['isdata'] = is_data
+		#output['runviterbi']['isdata'] = is_data
 		output['runviterbi']['parameterdir'] = parameter_dir
 		output['runviterbi']['nbestevents'] = n_best_events
 		output['runviterbi']['nmaxqueries'] = n_max_queries
@@ -67,7 +67,7 @@ def main():
 
 		output['runforward'] = {}
 		output['runforward']['seqfile'] = seqfile
-		output['runforward']['isdata'] = is_data
+		#output['runforward']['isdata'] = is_data
 		output['runforward']['parameterdir'] = parameter_dir
 		output['runforward']['nbestevents'] = n_best_events
 		output['runforward']['nmaxqueries'] = n_max_queries

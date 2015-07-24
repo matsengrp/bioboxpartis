@@ -5,13 +5,23 @@ assemble.sh (file)
 parse_yaml.sh (file)
 Taskfile (file)
 input_data (directory): inputfile, YamlFileGenerator.py
-output_data (directory)
 
 1. Git clone the partis project (git repository is here: https://github.com/psathyrella/partis).
 2. Place all the files mentioned before into the main partis directory
 3. Run YamlFileGenerator.py and enter in the parameters. Make sure the generated yaml file is inside of the input_data directory.
 4. Copy the input data file into the 'input_data' directory.
 5. Build the docker image from the docker file (docker build -t <name of image> .)
-6. Run this docker command: docker run --volume="$(pwd)/input_data:/bbx/input:ro" --volume="$(pwd)/output_data:/bbx/output:rw" <name of image> default
+6. Run this docker command: docker run --volume="$(pwd)/input_data:/bbx/input:ro" --volume="$(pwd)/output_data:/bbx/output:rw" <name of image> <task>
 
 You should now see the output files in the directory you specified. 
+
+Potential problems:
+Import error with yaml:
+This means that you do not have the python yaml module installed on your machine. 
+
+Permission denied errors:
+Navigate to the directories/files mentioned through the command line and enter the command: "chmod +x *"
+
+Make sure the task you specified in the docker command is the same as the one you specified when you generated the input yaml file. 
+
+
