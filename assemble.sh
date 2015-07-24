@@ -82,7 +82,7 @@ elif grep -q runforward "$INPUT"; then
 	N_BEST_EVENTSRF=$partis_runforward_nbestevents
 	N_MAX_QUERIESRF=$partis_runforward_nmaxqueries
 	DEBUGRF=$partis_runforward_debug
-	OUTFNAMEF=$partis_runforward_outfname
+	OUTFNAMERF=$partis_runforward_outfname
 	echo $SEQFILERF
 	echo $IS_DATARF
 	echo $PARAMETER_DIRRF
