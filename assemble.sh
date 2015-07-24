@@ -82,7 +82,7 @@ elif grep -q runforward "$INPUT"; then
 	N_BEST_EVENTSRF=$partis_runforward_nbestevents
 	N_MAX_QUERIESRF=$partis_runforward_nmaxqueries
 	DEBUGRF=$partis_runforward_debug
-	OUTFNAMEF=$partis_runforward_outfname
+	OUTFNAMERF=$partis_runforward_outfname
 	echo $SEQFILERF
 	echo $IS_DATARF
 	echo $PARAMETER_DIRRF
@@ -103,6 +103,8 @@ elif grep -q runforward "$INPUT"; then
 fi
 echo "================================="
 
+#Create a boolean dictionary to process boolean parameters
+#IS_DATA, SKIP_UNPRODUCTIVE, 
 
 # Use grep to get $TASK in /Taskfile
 CMD=$(egrep ^${TASK}: /Taskfile | cut -f 2 -d ':')

@@ -4,7 +4,11 @@ cacheparameters:
   plotdir: /bbx/output/_plots/example
   seqfile: ./test/A-subset-200.tsv
   skipunproductive: true
-simulate:
-  nmaxqueries: '10'
-  outfname: /bbx/output/_output/example/simu.csv
+runforward:
+  debug: '1'
+  isdata: true
+  nbestevents: '5'
+  nmaxqueries: '1'
+  outfname: /bbx/output/_output/example/forward.csv
   parameterdir: /bbx/output/_output/example/data/hmm
+  seqfile: ./test/A-subset-200.tsv
