@@ -17,4 +17,3 @@ docker run --volume="$(pwd)/input_data:/bbx/input:ro" --volume="$(pwd)/output_da
 -the --volume tags will link the directory on your local machine to directories within the docker container
 -task is the specified task you want to run; to see all the possible executable tasks take a look at the taskfile
 ==============================
-
