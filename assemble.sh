@@ -47,7 +47,7 @@ if grep -q simulate "$INPUT" ; then
 	SIM_PARAMETER_DIR=$partis_simulate_parameterdir
 	echo $N_MAX_QUERIES
 	echo $OUTFNAME
-	echo$SIM_PARAMETER_DIR
+	echo $SIM_PARAMETER_DIR
 	# cat << EOF > ${OUTPUT}/biobox.yml
 	# 	project: bioboxpartis
 	# 	action: simulate
