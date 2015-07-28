@@ -1,0 +1,141 @@
+<?xml version="1.0" standalone="no"?>
+<svg width="567" height="466" viewBox="0 0 567 466" xmlns="http://www.w3.org/2000/svg">
+<title>
+_plots/example/sw/performance/plots/dj_insertion.svg
+</title>
+<desc>
+Creator: ROOT Version 5.34/14
+CreationDate: Tue Jul 28 23:41:05 2015</desc>
+<defs>
+</defs>
+<rect x="0" y="0" width="567" height="466" fill="white"/>
+<rect x="79" y="37" width="443" height="359" fill="none" stroke="black"/>
+<rect x="79" y="37" width="443" height="359" fill="none" stroke="black"/>
+<path d="M79,396h 443" fill="none" stroke="black" stroke-width="3"/>
+<text x="324" y="449" fill="black" font-size="32" font-family="Times" font-weight="bold">
+inferred - true
+</text>
+<path d="M159,385v 11" fill="none" stroke="black" stroke-width="3"/>
+<path d="M177,391v 5" fill="none" stroke="black" stroke-width="3"/>
+<path d="M194,391v 5" fill="none" stroke="black" stroke-width="3"/>
+<path d="M212,391v 5" fill="none" stroke="black" stroke-width="3"/>
+<path d="M230,391v 5" fill="none" stroke="black" stroke-width="3"/>
+<path d="M247,385v 11" fill="none" stroke="black" stroke-width="3"/>
+<path d="M265,391v 5" fill="none" stroke="black" stroke-width="3"/>
+<path d="M283,391v 5" fill="none" stroke="black" stroke-width="3"/>
+<path d="M300,391v 5" fill="none" stroke="black" stroke-width="3"/>
+<path d="M318,391v 5" fill="none" stroke="black" stroke-width="3"/>
+<path d="M336,385v 11" fill="none" stroke="black" stroke-width="3"/>
+<path d="M354,391v 5" fill="none" stroke="black" stroke-width="3"/>
+<path d="M371,391v 5" fill="none" stroke="black" stroke-width="3"/>
+<path d="M389,391v 5" fill="none" stroke="black" stroke-width="3"/>
+<path d="M407,391v 5" fill="none" stroke="black" stroke-width="3"/>
+<path d="M424,385v 11" fill="none" stroke="black" stroke-width="3"/>
+<path d="M442,391v 5" fill="none" stroke="black" stroke-width="3"/>
+<path d="M460,391v 5" fill="none" stroke="black" stroke-width="3"/>
+<path d="M477,391v 5" fill="none" stroke="black" stroke-width="3"/>
+<path d="M495,391v 5" fill="none" stroke="black" stroke-width="3"/>
+<path d="M513,385v 11" fill="none" stroke="black" stroke-width="3"/>
+<path d="M159,385v 11" fill="none" stroke="black" stroke-width="3"/>
+<path d="M141,391v 5" fill="none" stroke="black" stroke-width="3"/>
+<path d="M124,391v 5" fill="none" stroke="black" stroke-width="3"/>
+<path d="M106,391v 5" fill="none" stroke="black" stroke-width="3"/>
+<path d="M88,391v 5" fill="none" stroke="black" stroke-width="3"/>
+<path d="M513,385v 11" fill="none" stroke="black" stroke-width="3"/>
+<text x="144" y="416" fill="black" font-size="21" font-family="Times" font-weight="bold">
+-10
+</text>
+<text x="238" y="416" fill="black" font-size="21" font-family="Times" font-weight="bold">
+-5
+</text>
+<text x="330" y="416" fill="black" font-size="21" font-family="Times" font-weight="bold">
+0
+</text>
+<text x="418" y="416" fill="black" font-size="21" font-family="Times" font-weight="bold">
+5
+</text>
+<text x="501" y="416" fill="black" font-size="21" font-family="Times" font-weight="bold">
+10
+</text>
+<path d="M79,37h 443" fill="none" stroke="black" stroke-width="3"/>
+<path d="M159,48v -11" fill="none" stroke="black" stroke-width="3"/>
+<path d="M177,43v -6" fill="none" stroke="black" stroke-width="3"/>
+<path d="M194,43v -6" fill="none" stroke="black" stroke-width="3"/>
+<path d="M212,43v -6" fill="none" stroke="black" stroke-width="3"/>
+<path d="M230,43v -6" fill="none" stroke="black" stroke-width="3"/>
+<path d="M247,48v -11" fill="none" stroke="black" stroke-width="3"/>
+<path d="M265,43v -6" fill="none" stroke="black" stroke-width="3"/>
+<path d="M283,43v -6" fill="none" stroke="black" stroke-width="3"/>
+<path d="M300,43v -6" fill="none" stroke="black" stroke-width="3"/>
+<path d="M318,43v -6" fill="none" stroke="black" stroke-width="3"/>
+<path d="M336,48v -11" fill="none" stroke="black" stroke-width="3"/>
+<path d="M354,43v -6" fill="none" stroke="black" stroke-width="3"/>
+<path d="M371,43v -6" fill="none" stroke="black" stroke-width="3"/>
+<path d="M389,43v -6" fill="none" stroke="black" stroke-width="3"/>
+<path d="M407,43v -6" fill="none" stroke="black" stroke-width="3"/>
+<path d="M424,48v -11" fill="none" stroke="black" stroke-width="3"/>
+<path d="M442,43v -6" fill="none" stroke="black" stroke-width="3"/>
+<path d="M460,43v -6" fill="none" stroke="black" stroke-width="3"/>
+<path d="M477,43v -6" fill="none" stroke="black" stroke-width="3"/>
+<path d="M495,43v -6" fill="none" stroke="black" stroke-width="3"/>
+<path d="M513,48v -11" fill="none" stroke="black" stroke-width="3"/>
+<path d="M159,48v -11" fill="none" stroke="black" stroke-width="3"/>
+<path d="M141,43v -6" fill="none" stroke="black" stroke-width="3"/>
+<path d="M124,43v -6" fill="none" stroke="black" stroke-width="3"/>
+<path d="M106,43v -6" fill="none" stroke="black" stroke-width="3"/>
+<path d="M88,43v -6" fill="none" stroke="black" stroke-width="3"/>
+<path d="M513,48v -11" fill="none" stroke="black" stroke-width="3"/>
+<path d="M79,396v -359" fill="none" stroke="black" stroke-width="3"/>
+<path d="M92,396h -13" fill="none" stroke="black" stroke-width="3"/>
+<path d="M86,370h -7" fill="none" stroke="black" stroke-width="3"/>
+<path d="M86,344h -7" fill="none" stroke="black" stroke-width="3"/>
+<path d="M86,317h -7" fill="none" stroke="black" stroke-width="3"/>
+<path d="M92,291h -13" fill="none" stroke="black" stroke-width="3"/>
+<path d="M86,265h -7" fill="none" stroke="black" stroke-width="3"/>
+<path d="M86,239h -7" fill="none" stroke="black" stroke-width="3"/>
+<path d="M86,213h -7" fill="none" stroke="black" stroke-width="3"/>
+<path d="M92,186h -13" fill="none" stroke="black" stroke-width="3"/>
+<path d="M86,160h -7" fill="none" stroke="black" stroke-width="3"/>
+<path d="M86,134h -7" fill="none" stroke="black" stroke-width="3"/>
+<path d="M86,108h -7" fill="none" stroke="black" stroke-width="3"/>
+<path d="M92,81h -13" fill="none" stroke="black" stroke-width="3"/>
+<path d="M92,81h -13" fill="none" stroke="black" stroke-width="3"/>
+<path d="M86,55h -7" fill="none" stroke="black" stroke-width="3"/>
+<text x="46" y="404" fill="black" font-size="21" font-family="Times" font-weight="bold">
+0.0
+</text>
+<text x="46" y="299" fill="black" font-size="21" font-family="Times" font-weight="bold">
+0.2
+</text>
+<text x="46" y="194" fill="black" font-size="21" font-family="Times" font-weight="bold">
+0.4
+</text>
+<text x="46" y="89" fill="black" font-size="21" font-family="Times" font-weight="bold">
+0.6
+</text>
+<path d="M522,396v -359" fill="none" stroke="black" stroke-width="3"/>
+<path d="M508,396h 14" fill="none" stroke="black" stroke-width="3"/>
+<path d="M515,370h 7" fill="none" stroke="black" stroke-width="3"/>
+<path d="M515,344h 7" fill="none" stroke="black" stroke-width="3"/>
+<path d="M515,317h 7" fill="none" stroke="black" stroke-width="3"/>
+<path d="M508,291h 14" fill="none" stroke="black" stroke-width="3"/>
+<path d="M515,265h 7" fill="none" stroke="black" stroke-width="3"/>
+<path d="M515,239h 7" fill="none" stroke="black" stroke-width="3"/>
+<path d="M515,213h 7" fill="none" stroke="black" stroke-width="3"/>
+<path d="M508,186h 14" fill="none" stroke="black" stroke-width="3"/>
+<path d="M515,160h 7" fill="none" stroke="black" stroke-width="3"/>
+<path d="M515,134h 7" fill="none" stroke="black" stroke-width="3"/>
+<path d="M515,108h 7" fill="none" stroke="black" stroke-width="3"/>
+<path d="M508,81h 14" fill="none" stroke="black" stroke-width="3"/>
+<path d="M508,81h 14" fill="none" stroke="black" stroke-width="3"/>
+<path d="M515,55h 7" fill="none" stroke="black" stroke-width="3"/>
+<rect x="113" y="-4" width="195" height="39" fill="white"/>
+<text x="122" y="23" fill="black" font-size="30" font-family="Helvetica" font-weight="bold">
+dj_insertion
+</text>
+<path d="M80,395v -2h 17v 2h 124v -20h 18v 20h 17v -7h 18v 3h 18v -3h 17v -39h 18v -252h 18v 262h 17v 14h 18v 5h 35v 15h 18v -18h 18v 11h 18v 9h 35v -2h 18" fill="none" stroke="#ff0000" stroke-width="6"/>
+<path d="M332,107h 42" fill="none" stroke="#ff0000" stroke-width="6"/>
+<rect x="113" y="-4" width="195" height="39" fill="white"/>
+<text x="122" y="23" fill="black" font-size="30" font-family="Helvetica" font-weight="bold">
+dj_insertion
+</text></svg>

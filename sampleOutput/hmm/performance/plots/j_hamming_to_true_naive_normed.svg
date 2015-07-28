@@ -1,0 +1,124 @@
+<?xml version="1.0" standalone="no"?>
+<svg width="567" height="466" viewBox="0 0 567 466" xmlns="http://www.w3.org/2000/svg">
+<title>
+_plots/example/hmm/performance/plots/j_hamming_to_true_naive_normed.svg
+</title>
+<desc>
+Creator: ROOT Version 5.34/14
+CreationDate: Tue Jul 28 23:41:12 2015</desc>
+<defs>
+</defs>
+<rect x="0" y="0" width="567" height="466" fill="white"/>
+<rect x="79" y="37" width="443" height="359" fill="none" stroke="black"/>
+<rect x="79" y="37" width="443" height="359" fill="none" stroke="black"/>
+<path d="M79,396h 443" fill="none" stroke="black" stroke-width="3"/>
+<text x="268" y="446" fill="black" font-size="32" font-family="Times" font-weight="bold">
+hamming distance
+</text>
+<path d="M98,385v 11" fill="none" stroke="black" stroke-width="3"/>
+<path d="M135,391v 5" fill="none" stroke="black" stroke-width="3"/>
+<path d="M171,391v 5" fill="none" stroke="black" stroke-width="3"/>
+<path d="M208,391v 5" fill="none" stroke="black" stroke-width="3"/>
+<path d="M245,391v 5" fill="none" stroke="black" stroke-width="3"/>
+<path d="M282,385v 11" fill="none" stroke="black" stroke-width="3"/>
+<path d="M319,391v 5" fill="none" stroke="black" stroke-width="3"/>
+<path d="M356,391v 5" fill="none" stroke="black" stroke-width="3"/>
+<path d="M393,391v 5" fill="none" stroke="black" stroke-width="3"/>
+<path d="M429,391v 5" fill="none" stroke="black" stroke-width="3"/>
+<path d="M466,385v 11" fill="none" stroke="black" stroke-width="3"/>
+<path d="M98,385v 11" fill="none" stroke="black" stroke-width="3"/>
+<path d="M466,385v 11" fill="none" stroke="black" stroke-width="3"/>
+<path d="M503,391v 5" fill="none" stroke="black" stroke-width="3"/>
+<text x="92" y="416" fill="black" font-size="21" font-family="Times" font-weight="bold">
+0
+</text>
+<text x="276" y="416" fill="black" font-size="21" font-family="Times" font-weight="bold">
+5
+</text>
+<text x="455" y="416" fill="black" font-size="21" font-family="Times" font-weight="bold">
+10
+</text>
+<path d="M79,37h 443" fill="none" stroke="black" stroke-width="3"/>
+<path d="M98,48v -11" fill="none" stroke="black" stroke-width="3"/>
+<path d="M135,43v -6" fill="none" stroke="black" stroke-width="3"/>
+<path d="M171,43v -6" fill="none" stroke="black" stroke-width="3"/>
+<path d="M208,43v -6" fill="none" stroke="black" stroke-width="3"/>
+<path d="M245,43v -6" fill="none" stroke="black" stroke-width="3"/>
+<path d="M282,48v -11" fill="none" stroke="black" stroke-width="3"/>
+<path d="M319,43v -6" fill="none" stroke="black" stroke-width="3"/>
+<path d="M356,43v -6" fill="none" stroke="black" stroke-width="3"/>
+<path d="M393,43v -6" fill="none" stroke="black" stroke-width="3"/>
+<path d="M429,43v -6" fill="none" stroke="black" stroke-width="3"/>
+<path d="M466,48v -11" fill="none" stroke="black" stroke-width="3"/>
+<path d="M98,48v -11" fill="none" stroke="black" stroke-width="3"/>
+<path d="M466,48v -11" fill="none" stroke="black" stroke-width="3"/>
+<path d="M503,43v -6" fill="none" stroke="black" stroke-width="3"/>
+<path d="M79,396v -359" fill="none" stroke="black" stroke-width="3"/>
+<path d="M92,396h -13" fill="none" stroke="black" stroke-width="3"/>
+<path d="M86,378h -7" fill="none" stroke="black" stroke-width="3"/>
+<path d="M86,360h -7" fill="none" stroke="black" stroke-width="3"/>
+<path d="M86,341h -7" fill="none" stroke="black" stroke-width="3"/>
+<path d="M92,323h -13" fill="none" stroke="black" stroke-width="3"/>
+<path d="M86,305h -7" fill="none" stroke="black" stroke-width="3"/>
+<path d="M86,287h -7" fill="none" stroke="black" stroke-width="3"/>
+<path d="M86,268h -7" fill="none" stroke="black" stroke-width="3"/>
+<path d="M92,250h -13" fill="none" stroke="black" stroke-width="3"/>
+<path d="M86,232h -7" fill="none" stroke="black" stroke-width="3"/>
+<path d="M86,214h -7" fill="none" stroke="black" stroke-width="3"/>
+<path d="M86,195h -7" fill="none" stroke="black" stroke-width="3"/>
+<path d="M92,177h -13" fill="none" stroke="black" stroke-width="3"/>
+<path d="M86,159h -7" fill="none" stroke="black" stroke-width="3"/>
+<path d="M86,140h -7" fill="none" stroke="black" stroke-width="3"/>
+<path d="M86,122h -7" fill="none" stroke="black" stroke-width="3"/>
+<path d="M92,104h -13" fill="none" stroke="black" stroke-width="3"/>
+<path d="M92,104h -13" fill="none" stroke="black" stroke-width="3"/>
+<path d="M86,86h -7" fill="none" stroke="black" stroke-width="3"/>
+<path d="M86,67h -7" fill="none" stroke="black" stroke-width="3"/>
+<path d="M86,49h -7" fill="none" stroke="black" stroke-width="3"/>
+<text x="46" y="404" fill="black" font-size="21" font-family="Times" font-weight="bold">
+0.0
+</text>
+<text x="46" y="331" fill="black" font-size="21" font-family="Times" font-weight="bold">
+0.2
+</text>
+<text x="46" y="257" fill="black" font-size="21" font-family="Times" font-weight="bold">
+0.4
+</text>
+<text x="46" y="185" fill="black" font-size="21" font-family="Times" font-weight="bold">
+0.6
+</text>
+<text x="46" y="112" fill="black" font-size="21" font-family="Times" font-weight="bold">
+0.8
+</text>
+<path d="M522,396v -359" fill="none" stroke="black" stroke-width="3"/>
+<path d="M508,396h 14" fill="none" stroke="black" stroke-width="3"/>
+<path d="M515,378h 7" fill="none" stroke="black" stroke-width="3"/>
+<path d="M515,360h 7" fill="none" stroke="black" stroke-width="3"/>
+<path d="M515,341h 7" fill="none" stroke="black" stroke-width="3"/>
+<path d="M508,323h 14" fill="none" stroke="black" stroke-width="3"/>
+<path d="M515,305h 7" fill="none" stroke="black" stroke-width="3"/>
+<path d="M515,287h 7" fill="none" stroke="black" stroke-width="3"/>
+<path d="M515,268h 7" fill="none" stroke="black" stroke-width="3"/>
+<path d="M508,250h 14" fill="none" stroke="black" stroke-width="3"/>
+<path d="M515,232h 7" fill="none" stroke="black" stroke-width="3"/>
+<path d="M515,214h 7" fill="none" stroke="black" stroke-width="3"/>
+<path d="M515,195h 7" fill="none" stroke="black" stroke-width="3"/>
+<path d="M508,177h 14" fill="none" stroke="black" stroke-width="3"/>
+<path d="M515,159h 7" fill="none" stroke="black" stroke-width="3"/>
+<path d="M515,140h 7" fill="none" stroke="black" stroke-width="3"/>
+<path d="M515,122h 7" fill="none" stroke="black" stroke-width="3"/>
+<path d="M508,104h 14" fill="none" stroke="black" stroke-width="3"/>
+<path d="M508,104h 14" fill="none" stroke="black" stroke-width="3"/>
+<path d="M515,86h 7" fill="none" stroke="black" stroke-width="3"/>
+<path d="M515,67h 7" fill="none" stroke="black" stroke-width="3"/>
+<path d="M515,49h 7" fill="none" stroke="black" stroke-width="3"/>
+<rect x="113" y="-4" width="397" height="40" fill="white"/>
+<text x="128" y="22" fill="black" font-size="22" font-family="Helvetica" font-weight="bold">
+j_hamming_to_true_naive_normed
+</text>
+<path d="M80,395v -298h 36v 298h 37v -17h 37v 6h 37v -2h 37v 2h 36v 6h 37v 5h 74v -1h 37v 1h 37v -1h 37" fill="none" stroke="#ff0000" stroke-width="6"/>
+<path d="M332,107h 42" fill="none" stroke="#ff0000" stroke-width="6"/>
+<rect x="113" y="-4" width="397" height="40" fill="white"/>
+<text x="128" y="22" fill="black" font-size="22" font-family="Helvetica" font-weight="bold">
+j_hamming_to_true_naive_normed
+</text></svg>
