@@ -27,84 +27,102 @@ eval $(parse_yaml $INPUT "partis_")
 
 # Access yaml content
 # get parameters for "cache-parameters"
-IS_DATA=$partis_cacheparameters_isdata
-PARAMETER_DIR=$partis_cacheparameters_parameterdir
-PLOTDIR=$partis_cacheparameters_plotdir
-SEQFILE=$partis_cacheparameters_seqfile
-SKIP_UNPRODUCTIVE=$partis_cacheparameters_skipunproductive
+IS_DATA_CP=$partis_cacheparameters_isdata
+PARAMETER_DIR_CP=$partis_cacheparameters_parameterdir
+PLOTDIR_CP=$partis_cacheparameters_plotdir
+SEQFILE_CP=$partis_cacheparameters_seqfile
+SKIP_UNPRODUCTIVE_CP=$partis_cacheparameters_skipunproductive
+N_MAX_QUERIES_CP=$partis_cacheparameters_nmaxqueries
 echo "=== parameters read from yaml ==="
 echo "CACHE PARAMETERS"
-echo $IS_DATA
-echo $PARAMETER_DIR
-echo $PLOTDIR
-echo $SEQFILE
-echo $SKIP_UNPRODUCTIVE
+echo $IS_DATA_CP
+echo $PARAMETER_DIR_CP
+echo $PLOTDIR_CP
+echo $SEQFILE_CP
+echo $SKIP_UNPRODUCTIVE_CP
+echo $N_MAX_QUERIES_CP
+
+echo -n 'simulate: source ./bin/handbuild.sh && python ./bin/partis.py --action cache-parameters --seqfile ${SEQFILE_CP} --parameter-dir ${PARAMETER_DIR_CP} --plotdir ${PLOTDIR_CP} --n-max-queries ${N_MAX_QUERIES_CP} ' >> ./Taskfile
+if [ "IS_DATA_CP" = true] ; then
+	echo -n '--is-data ' ./Taskfile
+fi
+if [ "SKIP_UNPRODUCTIVE_CP" = true] ; then
+	echo -n '--skip-unproductive ' ./Taskfile
+fi
+
 #if simulate, elif run-viterbi, elif run-forward
 if grep -q simulate "$INPUT" ; then
 	#statements
-	N_MAX_QUERIES=$partis_simulate_nmaxqueries
-	OUTFNAME=$partis_simulate_outfname
-	SIM_PARAMETER_DIR=$partis_simulate_parameterdir
-	echo $N_MAX_QUERIES
-	echo $OUTFNAME
-	echo $SIM_PARAMETER_DIR
-	# cat << EOF > ${OUTPUT}/biobox.yml
-	# 	project: bioboxpartis
-	# 	action: simulate
-	# 	output file name: ${OUTFNAME}
-	# EOF
+	N_MAX_QUERIES_SIM=$partis_simulate_nmaxqueries
+	OUTFNAME_SIM=$partis_simulate_outfname
+	PARAMETER_DIR_SIM=$partis_simulate_parameterdir
+	echo $N_MAX_QUERIES_SIM
+	echo $OUTFNAME_SIM
+	echo $PARAMETER_DIR_SIM
+
+	echo -n '&& python ./bin/partis.py --action simulate --outfname ${OUTFNAME_SIM} --parameter-dir ${PARAMETER_DIR_SIM} --n-max-queries ${N_MAX_QUERIES_SIM} ' >> ./Taskfile
+
+	
 elif grep -q runviterbi "$INPUT"; then
 	#statements
-	SEQFILERV=$partis_runviterbi_seqfile
-	IS_DATARV=$partis_runviterbi_isdata
-	PARAMETER_DIRRV=$partis_runviterbi_parameterdir
-	N_BEST_EVENTSRV=$partis_runviterbi_nbestevents
-	N_MAX_QUERIESRV=$partis_runviterbi_nmaxqueries
-	DEBUGRV=$partis_runviterbi_debug
-	OUTFNAMERV=$partis_runviterbi_outfname
-	echo $SEQFILERV
-	#echo $IS_DATARV
-	echo $PARAMETER_DIRRV
-	echo $N_BEST_EVENTSRV
-	echo $N_MAX_QUERIESRV
-	echo $DEBUGRV
-	echo $OUTFNAMERV
-	# cat << EOF > ${OUTPUT}/biobox.yml
-	# 	project: bioboxpartis
-	# 	action: runviterbi
-	# 	output file name: ${OUTFNAMERV}
-	# EOF
+	SEQFILE_RV=$partis_runviterbi_seqfile
+	IS_DATA_RV=$partis_runviterbi_isdata
+	PARAMETER_DIR_RV=$partis_runviterbi_parameterdir
+	N_BEST_EVENTS_RV=$partis_runviterbi_nbestevents
+	N_MAX_QUERIES_RV=$partis_runviterbi_nmaxqueries
+	DEBUG_RV=$partis_runviterbi_debug
+	OUTFNAME_RV=$partis_runviterbi_outfname
+	PLOTDIR_RV=$partis_runviterbi_plotdir
+	PLOTPERFORMANCE_RV=$partis_runviterbi_plotperformance
+	echo $SEQFILE_RV
+	echo $IS_DATARV
+	echo $PARAMETER_DIR_RV
+	echo $N_BEST_EVENTS_RV
+	echo $N_MAX_QUERIES_RV
+	echo $DEBUG_RV
+	echo $OUTFNAME_RV
+	echo $PLOTDIR_RV
+	echo $PLOTPERFORMANCE_RV
+
+	echo -n '&& ./bin/partis.py --action run-viterbi --seqfile ${SEQFILE_RV} --parameter-dir ${PARAMETER_DIR_RV} --n-best-events ${N_BEST_EVENTS_RV} --n-max-queries ${N_MAX_QUERIES_RV} --debug ${DEBUG_RV} --outfname ${OUTFNAME_RV} --plotdir ${PLOTDIR_RV} ' ./Taskfile
+	
+	if [ "IS_DATA_RV" = true] ; then
+		echo -n '--is-data ' ./Taskfile
+	fi
+	if [ "PLOTPERFORMANCE_RV" = true] ; then
+		echo -n '--plot-performance ' ./Taskfile
+	fi
+
 elif grep -q runforward "$INPUT"; then
 	#statements
-	SEQFILERF=$partis_runforward_seqfile
-	IS_DATARF=$partis_runforward_isdata
-	PARAMETER_DIRRF=$partis_runforward_parameterdir
-	N_BEST_EVENTSRF=$partis_runforward_nbestevents
-	N_MAX_QUERIESRF=$partis_runforward_nmaxqueries
-	DEBUGRF=$partis_runforward_debug
-	OUTFNAMERF=$partis_runforward_outfname
-	echo $SEQFILERF
-	echo $IS_DATARF
-	echo $PARAMETER_DIRRF
-	echo $N_BEST_EVENTSRF
-	echo $N_MAX_QUERIESRF
-	echo $DEBUGRF
-	echo $OUTFNAMERF
-	# cat << EOF > ${OUTPUT}/biobox.yml
-	# 	project: bioboxpartis
-	# 	action: runforward
-	# 	output file name: ${OUTFNAMERF}
-	# EOF
-# else 
-# 	cat << EOF > ${OUTPUT}/biobox.yml
-#                 project: bioboxpartis
-#                 action: default
-#         EOF
-fi
-echo "================================="
+	SEQFILE_RF=$partis_runforward_seqfile
+	IS_DATA_RF=$partis_runforward_isdata
+	PARAMETER_DIR_RF=$partis_runforward_parameterdir
+	N_BEST_EVENTS_RF=$partis_runforward_nbestevents
+	N_MAX_QUERIES_RF=$partis_runforward_nmaxqueries
+	DEBUG_RF=$partis_runforward_debug
+	OUTFNAME_RF=$partis_runforward_outfname
+	PLOTDIR_RF=$partis_runforward_plotdir
+	PLOTPERFORMANCE_RF=$partis_runforward_plotperformance
+	echo $SEQFILE_RF
+	echo $IS_DATA_RF
+	echo $PARAMETER_DIR_RF
+	echo $N_BEST_EVENTS_RF
+	echo $N_MAX_QUERIES_RF
+	echo $DEBUG_RF
+	echo $OUTFNAME_RF
+	echo $PLOTDIR_RF
+	echo $PLOTPERFORMANCE_RF
+	
+	echo -n '&& ./bin/partis.py --action run-forward --seqfile ${SEQFILERF} --is-data --parameter-dir ${PARAMETER_DIRRF} --n-best-events ${N_BEST_EVENTSRF} --n-max-queries ${N_MAX_QUERIESRF} --debug ${DEBUGRF} --outfname ${OUTFNAMERF} --plotdir ${PLOTDIR_RF} ' ./Taskfile
 
-#Create a boolean dictionary to process boolean parameters
-#IS_DATA, SKIP_UNPRODUCTIVE, 
+	if [ "IS_DATA_RF" = true] ; then
+	echo -n '--is-data ' ./Taskfile
+	fi
+	if [ "PLOTPERFORMANCE_RF" = true] ; then
+		echo -n '--plot-performance ' ./Taskfile
+	fi
+echo "================================="
 
 # Use grep to get $TASK in /Taskfile
 CMD=$(egrep ^${TASK}: /Taskfile | cut -f 2 -d ':')

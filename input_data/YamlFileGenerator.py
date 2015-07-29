@@ -12,29 +12,30 @@ output = {}
 
 #the main function
 def main():
-
-
+	#asks for cache parameter action parameters
 	output['cacheparameters'] = {}
-
 	print "Enter sub parameters for intermediate action- \"cache-parameters:\"\n"
+
 	seqfile = raw_input('Enter the location of your input sequential text file (i.e. ./test/A-subset-200.tsv): ')
 	is_data = query_yes_no("Set is-data to true?: ") 
 	skip_unproductive = query_yes_no("Set skip_unproductive to true?: ") 
 	parameter_dir = raw_input('Enter the location of the parameter directory (i.e. /bbx/output/_output/example/data): ') 
 	plotdir = raw_input('Enter the location of the plot directory (i.e. /bbx/output/_plots/example): ')
+	n_max_queries = raw_input('Enter n_max_queries (i.e. 200): ')
 
 	output['cacheparameters']['seqfile'] = seqfile
 	output['cacheparameters']['isdata'] = is_data
 	output['cacheparameters']['skipunproductive'] = skip_unproductive
 	output['cacheparameters']['parameterdir'] = parameter_dir
 	output['cacheparameters']['plotdir'] = plotdir
+	output['cacheparameters']['nmaxqueries'] = n_max_queries
 
 	action = raw_input("Enter the final action (simulate, runviterbi, runforward): ")
 
 	if action == 'simulate':
 		outfname = raw_input('Enter the name of the output file (i.e. /bbx/output/_output/example/simu.csv): ')
 		parameter_dir = raw_input('Enter the location of the parameter directory (i.e. /bbx/output/_output/example/data/hmm): ')
-		n_max_queries = raw_input('Enter n_max_queries (i.e. 10): ')
+		n_max_queries = raw_input('Enter n_max_queries (i.e. 200): ')
 
 		output['simulate'] = {}
 		output['simulate']['outfname'] = outfname
@@ -45,10 +46,12 @@ def main():
 		seqfile = raw_input('Enter the location of your input sequential text file (i.e. ./test/A-subset-200.tsv): ')
 		is_data = query_yes_no('Set is_data to true?"')
 		parameter_dir = raw_input('Enter the location of the parameter directory (i.e. /bbx/output/_output/example/data/hmm): ') 
-		n_best_events = raw_input('Enter n_best_envets (i.e. 5): ')
+		n_best_events = raw_input('Enter n_best_events (i.e. 5): ')
 		n_max_queries = raw_input('Enter n_max_queries (i.e. 1): ')
 		debug = raw_input('Enter the debug level (i.e. 1): ')
 		outfname = raw_input('Enter the name of the output file (i.e. /bbx/output/_output/example/viterbi.csv): ')
+		plotdir = raw_input('Enter the location of the plot directory (i.e. /bbx/output/_plots/example): ')
+		plotperformance = query_yes_no('Set --plot-performance to true?"')
 
 		output['runviterbi'] = {}
 		output['runviterbi']['seqfile'] = seqfile
@@ -58,6 +61,8 @@ def main():
 		output['runviterbi']['nmaxqueries'] = n_max_queries
 		output['runviterbi']['debug'] = debug
 		output['runviterbi']['outfname'] = outfname
+		output['runviterbi']['plotdir'] = plotdir
+		output['runviterbi']['plotperformance'] = plotperformance
 
 	elif action == 'runforward':
 		seqfile = raw_input('Enter the location of your input sequential text file (i.e. ./test/A-subset-200.tsv): ')
@@ -67,6 +72,8 @@ def main():
 		n_max_queries = raw_input('Enter n_max_queries (i.e. 1): ')
 		debug = raw_input('Enter the debug level (i.e. 1): ')
 		outfname = raw_input('Enter the name of the output file (i.e. /bbx/output/_output/example/forward.csv): ')
+		plotdir = raw_input('Enter the location of the plot directory (i.e. /bbx/output/_plots/example): ')
+		plotperformance = query_yes_no('Set --plot-performance to true?"')
 
 		output['runforward'] = {}
 		output['runforward']['seqfile'] = seqfile
@@ -76,6 +83,8 @@ def main():
 		output['runforward']['nmaxqueries'] = n_max_queries
 		output['runforward']['debug'] = debug
 		output['runforward']['outfname'] = outfname
+		output['runviterbi']['plotdir'] = plotdir
+		output['runforward']['plotperformance'] = plotperformance
 
 	with open('biobox.yml', 'w') as f:
 		f.write(yaml.dump(output, default_flow_style=False))

@@ -1,14 +1,17 @@
 cacheparameters:
-  isdata: true
+  isdata: false
+  nmaxqueries: '200'
   parameterdir: /bbx/output/_output/example/data
   plotdir: /bbx/output/_plots/example
-  seqfile: ./test/A-subset-200.tsv
+  seqfile: ./simu-10-leaves-1-mutate.csv
   skipunproductive: true
-runforward:
+runviterbi:
   debug: '1'
-  isdata: true
+  isdata: false
   nbestevents: '5'
-  nmaxqueries: '1'
-  outfname: /bbx/output/_output/example/forward.csv
+  nmaxqueries: '200'
+  outfname: /bbx/output/_output/example/viterbi.csv
   parameterdir: /bbx/output/_output/example/data/hmm
-  seqfile: ./test/A-subset-200.tsv
+  plotdir: /bbx/output/_plots/example
+  plotperformance: true
+  seqfile: ./simu-10-leaves-1-mutate.csv
