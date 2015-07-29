@@ -83,7 +83,7 @@ def main():
 		output['runforward']['nmaxqueries'] = n_max_queries
 		output['runforward']['debug'] = debug
 		output['runforward']['outfname'] = outfname
-		output['runviterbi']['plotdir'] = plotdir
+		output['runforward']['plotdir'] = plotdir
 		output['runforward']['plotperformance'] = plotperformance
 
 	with open('biobox.yml', 'w') as f:
