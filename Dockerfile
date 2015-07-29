@@ -44,7 +44,7 @@ ENV JQ http://stedolan.github.io/jq/download/linux64/jq
 RUN cd /usr/local/bin && wget --quiet ${JQ} && chmod 700 jq
 
 # Add Taskfile to /
-ADD Taskfile /
+#ADD Taskfile /
 
 # Add assemble script to the directory /usr/local/bin inside the container.
 # /usr/local/bin is appended to the $PATH variable what means that every script

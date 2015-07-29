@@ -1,0 +1,10 @@
+bin_low_edge,contents,binerror,xtitle,binlabel
+-1.5,0.0,0.0,hamming distance,
+-0.5,0.67,0.057879184513951125,hamming distance,
+0.5,0.1,0.0223606797749979,hamming distance,
+1.5,0.11,0.02345207879911715,hamming distance,
+2.5,0.025,0.01118033988749895,hamming distance,
+3.5,0.055,0.016583123951777,hamming distance,
+4.5,0.035,0.013228756555322954,hamming distance,
+5.5,0.005,0.005,hamming distance,
+6.5,0.0,0.0,hamming distance,
