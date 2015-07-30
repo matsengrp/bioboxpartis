@@ -1,0 +1,4 @@
+bin_low_edge,contents,binerror,xtitle,binlabel
+-1.0,0.0,0.0,hamming distance,
+0.0,0.0,0.0,hamming distance,
+1.0,0.0,0.0,hamming distance,
