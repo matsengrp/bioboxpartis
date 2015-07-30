@@ -124,7 +124,7 @@ elif grep -q runforward "$INPUT" ; then
 	echo $PLOTDIR_RF
 	echo $PLOTPERFORMANCE_RF
 	
-	echo -n '&& ./bin/partis.py --action run-forward --seqfile ${SEQFILERF} --is-data --parameter-dir ${PARAMETER_DIRRF} --n-best-events ${N_BEST_EVENTSRF} --n-max-queries ${N_MAX_QUERIESRF} --debug ${DEBUGRF} --outfname ${OUTFNAMERF} --plotdir ${PLOTDIR_RF} ' >> ./Taskfile
+	echo -n '&& ./bin/partis.py --action run-forward --seqfile ${SEQFILE_RF} --parameter-dir ${PARAMETER_DIR_RF} --n-best-events ${N_BEST_EVENTS_RF} --n-max-queries ${N_MAX_QUERIES_RF} --debug ${DEBUG_RF} --outfname ${OUTFNAME_RF} --plotdir ${PLOTDIR_RF} ' >> ./Taskfile
 
 	if [ "$IS_DATA_RF" = true ] ; then
 	echo -n '--is-data ' >> ./Taskfile
