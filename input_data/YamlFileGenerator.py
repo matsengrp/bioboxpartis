@@ -1,16 +1,18 @@
 #!/usr/bin/env python
 #This python generates a yaml file for Partis based on user input
 #6-24-15
-
+echo '#==========================================================='
 #Import necessary libraries
 import sys
 import argparse
 import yaml
-
-#The dictionary that will contain the input
+echo '#==========================================================='
+#The dictionary that will contain the input from 'biobox.yml'
 output = {}
-
+echo '#==========================================================='
 #the main function
+#This function asks for parameters first for 'cache parameters', and then one of the following: simulation, run viterbi, run forward' 
+#It then dumps the information in key value pairs into a file called 'biobox.yml'
 def main():
 	#asks for cache parameter action parameters
 	output['cacheparameters'] = {}
@@ -30,6 +32,7 @@ def main():
 	output['cacheparameters']['plotdir'] = plotdir
 	output['cacheparameters']['nmaxqueries'] = n_max_queries
 
+	#taking in parameters based on action entered
 	action = raw_input("Enter the final action (simulate, runviterbi, runforward): ")
 
 	if action == 'simulate':
@@ -85,10 +88,11 @@ def main():
 		output['runforward']['outfname'] = outfname
 		output['runforward']['plotdir'] = plotdir
 		output['runforward']['plotperformance'] = plotperformance
-
+	
+	#write information into file called 'biobox.yml'
 	with open('biobox.yml', 'w') as f:
 		f.write(yaml.dump(output, default_flow_style=False))
-
+echo '#==========================================================='
 #Method that returns true if yes and false if no for a given question
 def query_yes_no(question, default="yes"):
     """Ask a yes/no question via raw_input() and return their answer.
@@ -121,13 +125,12 @@ def query_yes_no(question, default="yes"):
         else:
             sys.stdout.write("Please respond with 'yes' or 'no' "
                              "(or 'y' or 'n').\n")
-
-
-
+echo '#==========================================================='
 #Start of the script
 if __name__ == '__main__':
    main()
-
+echo '#==========================================================='
+#CODE FROM DEVELOPMENT
 # output = {"is_data":True,
 # 	"skip_unproductive":True,
 # 	"seqfile":"input_data/A-subset-200.tsv",

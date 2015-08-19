@@ -1,31 +1,19 @@
 #!/bin/bash
-
+#This script runs the biobox for partis. It is referenced as the entrypoint in the Dockerfile
+echo '#=============================================='
 # exit script if one command fails
 set -o errexit
-
 # exit script if Variable is not set
 set -o nounset
-
+echo '#=============================================='
 INPUT=/bbx/input/biobox.yml
 OUTPUT=/bbx/output
-#METADATA=/bbx/metadata
-
-# Since this script is the entrypoint to your container
-# you can access the task in `docker run task` as the first argument
 TASK=$1
-
-# Ensure the biobox.yaml file is valid
-# TBD
-
 mkdir -p ${OUTPUT}
-# =====================================
-# Parse the yaml file, read partis subparameters
-# include parse_yaml function
+echo '#=============================================='
+# Parse the yaml file, read partis subparameters for cache parameters action 
 . parse_yaml.sh 
-# read yaml file
 eval $(parse_yaml $INPUT "partis_")
-
-# Access yaml content
 # get parameters for "cache-parameters"
 IS_DATA_CP=$partis_cacheparameters_isdata
 PARAMETER_DIR_CP=$partis_cacheparameters_parameterdir
@@ -41,9 +29,6 @@ echo $PLOTDIR_CP
 echo $SEQFILE_CP
 echo $SKIP_UNPRODUCTIVE_CP
 echo $N_MAX_QUERIES_CP
-
-#cat Taskfile
-
 echo -n 'default: source ./bin/handbuild.sh && python ./bin/partis.py --action cache-parameters --seqfile ${SEQFILE_CP} --parameter-dir ${PARAMETER_DIR_CP} --plotdir ${PLOTDIR_CP} --n-max-queries ${N_MAX_QUERIES_CP} ' >> ./Taskfile
 #cat Taskfile
 if [ "$IS_DATA_CP" = true ] ; then
@@ -53,11 +38,13 @@ if [ "$SKIP_UNPRODUCTIVE_CP" = true ] ; then
 	echo -n '--skip-unproductive ' >> ./Taskfile
 fi
 cat Taskfile
-echo "XXXXXXXXXXXXX"
-echo $(pwd)
-ls -l /partis
-echo "XXXXXXXXXXXXX"
-#if simulate, elif run-viterbi, elif run-forward
+#echo "XXXXXXXXXXXXX"
+#echo $(pwd)
+#ls -l /partis
+#echo "XXXXXXXXXXXXX"
+echo '#=============================================='
+#caching parameters depending on the second action specified in biobox.yml (input file)
+#one of these actions: simulate, elif run-viterbi, elif run-forward
 if grep -q simulate "$INPUT" ; then
 	echo "SIMULATE"
 	#statements
@@ -69,8 +56,6 @@ if grep -q simulate "$INPUT" ; then
 	echo $PARAMETER_DIR_SIM
 
 	echo -n '&& python ./bin/partis.py --action simulate --outfname ${OUTFNAME_SIM} --parameter-dir ${PARAMETER_DIR_SIM} --n-max-queries ${N_MAX_QUERIES_SIM} ' >> ./Taskfile
-
-	
 elif grep -q runviterbi "$INPUT" ; then
 	#statements
 	echo "RUN VITERBI"
@@ -133,24 +118,16 @@ elif grep -q runforward "$INPUT" ; then
 		echo -n '--plot-performance ' >> ./Taskfile
 	fi
 fi
-echo "================================="
-
+echo '#=============================================='
+# Run the given task with eval.
+# Eval evaluates a String as if you would use it on a command line.
 cat Taskfile
-
 # Use grep to get $TASK in /Taskfile
 CMD=$(egrep ^${TASK}: ./Taskfile | cut -f 2 -d ':')
 if [[ -z ${CMD} ]]; then
   echo "Abort, no task found for '${TASK}'."
   exit 1
 fi
-
-# if /bbx/metadata is mounted create log.txt
-#if [ -d "$METADATA" ]; then
-#  CMD="($CMD) >& $METADATA/log.txt"
-#fi
-
-# Run the given task with eval.
-# Eval evaluates a String as if you would use it on a command line.
 eval ${CMD}
 
 echo "Process completed"

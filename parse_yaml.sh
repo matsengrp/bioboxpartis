@@ -1,5 +1,6 @@
 #!/bin/bash
-#this function parses the input yaml file for parameters
+#This function parses the input yaml file for parameters
+#It searches the yaml file for key value pairs
 function parse_yaml {
    local prefix=$2
    local s='[[:space:]]*' w='[a-zA-Z0-9_]*' fs=$(echo @|tr @ '\034')

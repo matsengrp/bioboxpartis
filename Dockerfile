@@ -33,26 +33,10 @@ COPY . /partis
 WORKDIR /partis
 CMD ./bin/build-and-test.sh
 
-#ENV PATH ${PATH}:/bbx/
-
-ENV CONVERT https://github.com/bronze1man/yaml2json/raw/master/builds/linux_386/yaml2json
-# download yaml2json and make it executable
-RUN cd /usr/local/bin && wget --quiet ${CONVERT} && chmod 700 yaml2json
-
-ENV JQ http://stedolan.github.io/jq/download/linux64/jq
-# download jq and make it executable
-RUN cd /usr/local/bin && wget --quiet ${JQ} && chmod 700 jq
-
-# Add Taskfile to /
-#ADD Taskfile /
-
 # Add assemble script to the directory /usr/local/bin inside the container.
 # /usr/local/bin is appended to the $PATH variable what means that every script
 # in that directory will be executed in the shell  without providing the path.
 ADD assemble.sh /usr/local/bin/ 
 RUN cd /usr/local/bin && chmod 700 assemble.sh
-
-#RUN echo $PATH
-#RUN ls /usr/local/bin/
 
 ENTRYPOINT ["assemble.sh"]
