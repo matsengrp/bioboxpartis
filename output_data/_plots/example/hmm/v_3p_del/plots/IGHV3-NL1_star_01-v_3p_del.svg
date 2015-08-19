@@ -5,132 +5,120 @@
 </title>
 <desc>
 Creator: ROOT Version 5.34/14
-CreationDate: Wed Aug 19 19:38:31 2015</desc>
+CreationDate: Wed Aug 19 22:00:14 2015</desc>
 <defs>
 </defs>
 <rect x="0" y="0" width="567" height="466" fill="white"/>
 <rect x="79" y="37" width="443" height="359" fill="none" stroke="black"/>
 <rect x="79" y="37" width="443" height="359" fill="none" stroke="black"/>
 <path d="M79,396h 443" fill="none" stroke="black" stroke-width="3"/>
-<path d="M107,385v 11" fill="none" stroke="black" stroke-width="3"/>
-<path d="M135,391v 5" fill="none" stroke="black" stroke-width="3"/>
-<path d="M162,391v 5" fill="none" stroke="black" stroke-width="3"/>
+<path d="M124,385v 11" fill="none" stroke="black" stroke-width="3"/>
+<path d="M146,391v 5" fill="none" stroke="black" stroke-width="3"/>
+<path d="M168,391v 5" fill="none" stroke="black" stroke-width="3"/>
 <path d="M190,391v 5" fill="none" stroke="black" stroke-width="3"/>
-<path d="M218,385v 11" fill="none" stroke="black" stroke-width="3"/>
-<path d="M245,391v 5" fill="none" stroke="black" stroke-width="3"/>
-<path d="M273,391v 5" fill="none" stroke="black" stroke-width="3"/>
-<path d="M300,391v 5" fill="none" stroke="black" stroke-width="3"/>
-<path d="M328,385v 11" fill="none" stroke="black" stroke-width="3"/>
-<path d="M356,391v 5" fill="none" stroke="black" stroke-width="3"/>
-<path d="M383,391v 5" fill="none" stroke="black" stroke-width="3"/>
+<path d="M212,385v 11" fill="none" stroke="black" stroke-width="3"/>
+<path d="M234,391v 5" fill="none" stroke="black" stroke-width="3"/>
+<path d="M256,391v 5" fill="none" stroke="black" stroke-width="3"/>
+<path d="M278,391v 5" fill="none" stroke="black" stroke-width="3"/>
+<path d="M300,385v 11" fill="none" stroke="black" stroke-width="3"/>
+<path d="M323,391v 5" fill="none" stroke="black" stroke-width="3"/>
+<path d="M345,391v 5" fill="none" stroke="black" stroke-width="3"/>
+<path d="M367,391v 5" fill="none" stroke="black" stroke-width="3"/>
+<path d="M389,385v 11" fill="none" stroke="black" stroke-width="3"/>
 <path d="M411,391v 5" fill="none" stroke="black" stroke-width="3"/>
-<path d="M439,385v 11" fill="none" stroke="black" stroke-width="3"/>
-<path d="M107,385v 11" fill="none" stroke="black" stroke-width="3"/>
-<path d="M439,385v 11" fill="none" stroke="black" stroke-width="3"/>
-<path d="M466,391v 5" fill="none" stroke="black" stroke-width="3"/>
-<path d="M494,391v 5" fill="none" stroke="black" stroke-width="3"/>
-<path d="M522,391v 5" fill="none" stroke="black" stroke-width="3"/>
-<text x="101" y="416" fill="black" font-size="21" font-family="Times" font-weight="bold">
-0
+<path d="M433,391v 5" fill="none" stroke="black" stroke-width="3"/>
+<path d="M455,391v 5" fill="none" stroke="black" stroke-width="3"/>
+<path d="M477,385v 11" fill="none" stroke="black" stroke-width="3"/>
+<path d="M124,385v 11" fill="none" stroke="black" stroke-width="3"/>
+<path d="M101,391v 5" fill="none" stroke="black" stroke-width="3"/>
+<path d="M477,385v 11" fill="none" stroke="black" stroke-width="3"/>
+<path d="M499,391v 5" fill="none" stroke="black" stroke-width="3"/>
+<text x="105" y="416" fill="black" font-size="21" font-family="Times" font-weight="bold">
+-0.4
 </text>
-<text x="212" y="416" fill="black" font-size="21" font-family="Times" font-weight="bold">
-2
+<text x="194" y="416" fill="black" font-size="21" font-family="Times" font-weight="bold">
+-0.2
 </text>
-<text x="322" y="416" fill="black" font-size="21" font-family="Times" font-weight="bold">
-4
+<text x="286" y="416" fill="black" font-size="21" font-family="Times" font-weight="bold">
+0.0
 </text>
-<text x="433" y="416" fill="black" font-size="21" font-family="Times" font-weight="bold">
-6
+<text x="375" y="416" fill="black" font-size="21" font-family="Times" font-weight="bold">
+0.2
+</text>
+<text x="463" y="416" fill="black" font-size="21" font-family="Times" font-weight="bold">
+0.4
 </text>
 <path d="M79,37h 443" fill="none" stroke="black" stroke-width="3"/>
-<path d="M107,48v -11" fill="none" stroke="black" stroke-width="3"/>
-<path d="M135,43v -6" fill="none" stroke="black" stroke-width="3"/>
-<path d="M162,43v -6" fill="none" stroke="black" stroke-width="3"/>
+<path d="M124,48v -11" fill="none" stroke="black" stroke-width="3"/>
+<path d="M146,43v -6" fill="none" stroke="black" stroke-width="3"/>
+<path d="M168,43v -6" fill="none" stroke="black" stroke-width="3"/>
 <path d="M190,43v -6" fill="none" stroke="black" stroke-width="3"/>
-<path d="M218,48v -11" fill="none" stroke="black" stroke-width="3"/>
-<path d="M245,43v -6" fill="none" stroke="black" stroke-width="3"/>
-<path d="M273,43v -6" fill="none" stroke="black" stroke-width="3"/>
-<path d="M300,43v -6" fill="none" stroke="black" stroke-width="3"/>
-<path d="M328,48v -11" fill="none" stroke="black" stroke-width="3"/>
-<path d="M356,43v -6" fill="none" stroke="black" stroke-width="3"/>
-<path d="M383,43v -6" fill="none" stroke="black" stroke-width="3"/>
+<path d="M212,48v -11" fill="none" stroke="black" stroke-width="3"/>
+<path d="M234,43v -6" fill="none" stroke="black" stroke-width="3"/>
+<path d="M256,43v -6" fill="none" stroke="black" stroke-width="3"/>
+<path d="M278,43v -6" fill="none" stroke="black" stroke-width="3"/>
+<path d="M300,48v -11" fill="none" stroke="black" stroke-width="3"/>
+<path d="M323,43v -6" fill="none" stroke="black" stroke-width="3"/>
+<path d="M345,43v -6" fill="none" stroke="black" stroke-width="3"/>
+<path d="M367,43v -6" fill="none" stroke="black" stroke-width="3"/>
+<path d="M389,48v -11" fill="none" stroke="black" stroke-width="3"/>
 <path d="M411,43v -6" fill="none" stroke="black" stroke-width="3"/>
-<path d="M439,48v -11" fill="none" stroke="black" stroke-width="3"/>
-<path d="M107,48v -11" fill="none" stroke="black" stroke-width="3"/>
-<path d="M439,48v -11" fill="none" stroke="black" stroke-width="3"/>
-<path d="M466,43v -6" fill="none" stroke="black" stroke-width="3"/>
-<path d="M494,43v -6" fill="none" stroke="black" stroke-width="3"/>
-<path d="M522,43v -6" fill="none" stroke="black" stroke-width="3"/>
+<path d="M433,43v -6" fill="none" stroke="black" stroke-width="3"/>
+<path d="M455,43v -6" fill="none" stroke="black" stroke-width="3"/>
+<path d="M477,48v -11" fill="none" stroke="black" stroke-width="3"/>
+<path d="M124,48v -11" fill="none" stroke="black" stroke-width="3"/>
+<path d="M101,43v -6" fill="none" stroke="black" stroke-width="3"/>
+<path d="M477,48v -11" fill="none" stroke="black" stroke-width="3"/>
+<path d="M499,43v -6" fill="none" stroke="black" stroke-width="3"/>
 <path d="M79,396v -359" fill="none" stroke="black" stroke-width="3"/>
 <path d="M92,396h -13" fill="none" stroke="black" stroke-width="3"/>
-<path d="M86,375h -7" fill="none" stroke="black" stroke-width="3"/>
-<path d="M86,353h -7" fill="none" stroke="black" stroke-width="3"/>
-<path d="M86,332h -7" fill="none" stroke="black" stroke-width="3"/>
-<path d="M86,311h -7" fill="none" stroke="black" stroke-width="3"/>
-<path d="M92,289h -13" fill="none" stroke="black" stroke-width="3"/>
-<path d="M86,268h -7" fill="none" stroke="black" stroke-width="3"/>
-<path d="M86,247h -7" fill="none" stroke="black" stroke-width="3"/>
-<path d="M86,225h -7" fill="none" stroke="black" stroke-width="3"/>
-<path d="M86,204h -7" fill="none" stroke="black" stroke-width="3"/>
-<path d="M92,183h -13" fill="none" stroke="black" stroke-width="3"/>
-<path d="M86,161h -7" fill="none" stroke="black" stroke-width="3"/>
-<path d="M86,140h -7" fill="none" stroke="black" stroke-width="3"/>
-<path d="M86,118h -7" fill="none" stroke="black" stroke-width="3"/>
-<path d="M86,97h -7" fill="none" stroke="black" stroke-width="3"/>
-<path d="M92,76h -13" fill="none" stroke="black" stroke-width="3"/>
-<path d="M92,76h -13" fill="none" stroke="black" stroke-width="3"/>
-<path d="M86,54h -7" fill="none" stroke="black" stroke-width="3"/>
-<text x="63" y="404" fill="black" font-size="21" font-family="Times" font-weight="bold">
-0
+<path d="M86,366h -7" fill="none" stroke="black" stroke-width="3"/>
+<path d="M86,336h -7" fill="none" stroke="black" stroke-width="3"/>
+<path d="M86,306h -7" fill="none" stroke="black" stroke-width="3"/>
+<path d="M86,277h -7" fill="none" stroke="black" stroke-width="3"/>
+<path d="M92,247h -13" fill="none" stroke="black" stroke-width="3"/>
+<path d="M86,217h -7" fill="none" stroke="black" stroke-width="3"/>
+<path d="M86,187h -7" fill="none" stroke="black" stroke-width="3"/>
+<path d="M86,157h -7" fill="none" stroke="black" stroke-width="3"/>
+<path d="M86,127h -7" fill="none" stroke="black" stroke-width="3"/>
+<path d="M92,97h -13" fill="none" stroke="black" stroke-width="3"/>
+<path d="M92,97h -13" fill="none" stroke="black" stroke-width="3"/>
+<path d="M86,67h -7" fill="none" stroke="black" stroke-width="3"/>
+<path d="M86,37h -7" fill="none" stroke="black" stroke-width="3"/>
+<text x="46" y="404" fill="black" font-size="21" font-family="Times" font-weight="bold">
+0.0
 </text>
-<text x="63" y="297" fill="black" font-size="21" font-family="Times" font-weight="bold">
-5
+<text x="46" y="254" fill="black" font-size="21" font-family="Times" font-weight="bold">
+0.5
 </text>
-<text x="51" y="191" fill="black" font-size="21" font-family="Times" font-weight="bold">
-10
-</text>
-<text x="51" y="83" fill="black" font-size="21" font-family="Times" font-weight="bold">
-15
+<text x="46" y="105" fill="black" font-size="21" font-family="Times" font-weight="bold">
+1.0
 </text>
 <path d="M522,396v -359" fill="none" stroke="black" stroke-width="3"/>
 <path d="M508,396h 14" fill="none" stroke="black" stroke-width="3"/>
-<path d="M515,375h 7" fill="none" stroke="black" stroke-width="3"/>
-<path d="M515,353h 7" fill="none" stroke="black" stroke-width="3"/>
-<path d="M515,332h 7" fill="none" stroke="black" stroke-width="3"/>
-<path d="M515,311h 7" fill="none" stroke="black" stroke-width="3"/>
-<path d="M508,289h 14" fill="none" stroke="black" stroke-width="3"/>
-<path d="M515,268h 7" fill="none" stroke="black" stroke-width="3"/>
-<path d="M515,247h 7" fill="none" stroke="black" stroke-width="3"/>
-<path d="M515,225h 7" fill="none" stroke="black" stroke-width="3"/>
-<path d="M515,204h 7" fill="none" stroke="black" stroke-width="3"/>
-<path d="M508,183h 14" fill="none" stroke="black" stroke-width="3"/>
-<path d="M515,161h 7" fill="none" stroke="black" stroke-width="3"/>
-<path d="M515,140h 7" fill="none" stroke="black" stroke-width="3"/>
-<path d="M515,118h 7" fill="none" stroke="black" stroke-width="3"/>
-<path d="M515,97h 7" fill="none" stroke="black" stroke-width="3"/>
-<path d="M508,76h 14" fill="none" stroke="black" stroke-width="3"/>
-<path d="M508,76h 14" fill="none" stroke="black" stroke-width="3"/>
-<path d="M515,54h 7" fill="none" stroke="black" stroke-width="3"/>
+<path d="M515,366h 7" fill="none" stroke="black" stroke-width="3"/>
+<path d="M515,336h 7" fill="none" stroke="black" stroke-width="3"/>
+<path d="M515,306h 7" fill="none" stroke="black" stroke-width="3"/>
+<path d="M515,277h 7" fill="none" stroke="black" stroke-width="3"/>
+<path d="M508,247h 14" fill="none" stroke="black" stroke-width="3"/>
+<path d="M515,217h 7" fill="none" stroke="black" stroke-width="3"/>
+<path d="M515,187h 7" fill="none" stroke="black" stroke-width="3"/>
+<path d="M515,157h 7" fill="none" stroke="black" stroke-width="3"/>
+<path d="M515,127h 7" fill="none" stroke="black" stroke-width="3"/>
+<path d="M508,97h 14" fill="none" stroke="black" stroke-width="3"/>
+<path d="M508,97h 14" fill="none" stroke="black" stroke-width="3"/>
+<path d="M515,67h 7" fill="none" stroke="black" stroke-width="3"/>
+<path d="M515,37h 7" fill="none" stroke="black" stroke-width="3"/>
 <rect x="113" y="-4" width="397" height="40" fill="white"/>
 <text x="129" y="23" fill="black" font-size="26" font-family="Helvetica" font-weight="bold">
 IGHV3-NL1_star_01-v_3p_del
 </text>
-<path d="M107,177v -77" fill="none" stroke="#ff0000" stroke-width="6"/>
-<path d="M107,94v -57" fill="none" stroke="#ff0000" stroke-width="6"/>
+<path d="M300,396v -296" fill="none" stroke="#ff0000" stroke-width="6"/>
+<path d="M300,94v -57" fill="none" stroke="#ff0000" stroke-width="6"/>
 <g stroke="#ff0000" stroke-width="6" fill="#ff0000">
-<circle cx="107" cy="97" r="3.5"/>
+<circle cx="300" cy="97" r="3.5"/>
 </g>
-<path d="M162,353v -39" fill="none" stroke="#ff0000" stroke-width="6"/>
-<path d="M162,307v -39" fill="none" stroke="#ff0000" stroke-width="6"/>
-<g stroke="#ff0000" stroke-width="6" fill="#ff0000">
-<circle cx="162" cy="311" r="3.5"/>
-</g>
-<path d="M494,337v -44" fill="none" stroke="#ff0000" stroke-width="6"/>
-<path d="M494,286v -44" fill="none" stroke="#ff0000" stroke-width="6"/>
-<g stroke="#ff0000" stroke-width="6" fill="#ff0000">
-<circle cx="494" cy="289" r="3.5"/>
-</g>
-<path d="M80,395v -298h 55v 214h 55v 84h 276v -106h 56" fill="none" stroke="#ff0000" stroke-width="6"/>
+<path d="M80,395v -298h 442" fill="none" stroke="#ff0000" stroke-width="6"/>
 <path d="M332,107h 42" fill="none" stroke="#ff0000" stroke-width="6"/>
 <rect x="113" y="-4" width="397" height="40" fill="white"/>
 <text x="129" y="23" fill="black" font-size="26" font-family="Helvetica" font-weight="bold">
