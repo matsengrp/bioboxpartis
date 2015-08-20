@@ -1,15 +1,15 @@
 #!/usr/bin/env python
 #This python generates a yaml file for Partis based on user input
 #6-24-15
-echo '#==========================================================='
+print '#==========================================================='
 #Import necessary libraries
 import sys
 import argparse
 import yaml
-echo '#==========================================================='
+print '#==========================================================='
 #The dictionary that will contain the input from 'biobox.yml'
 output = {}
-echo '#==========================================================='
+print '#==========================================================='
 #the main function
 #This function asks for parameters first for 'cache parameters', and then one of the following: simulation, run viterbi, run forward' 
 #It then dumps the information in key value pairs into a file called 'biobox.yml'
@@ -92,7 +92,7 @@ def main():
 	#write information into file called 'biobox.yml'
 	with open('biobox.yml', 'w') as f:
 		f.write(yaml.dump(output, default_flow_style=False))
-echo '#==========================================================='
+print '#==========================================================='
 #Method that returns true if yes and false if no for a given question
 def query_yes_no(question, default="yes"):
     """Ask a yes/no question via raw_input() and return their answer.
@@ -125,11 +125,11 @@ def query_yes_no(question, default="yes"):
         else:
             sys.stdout.write("Please respond with 'yes' or 'no' "
                              "(or 'y' or 'n').\n")
-echo '#==========================================================='
+print '#==========================================================='
 #Start of the script
 if __name__ == '__main__':
    main()
-echo '#==========================================================='
+print '#==========================================================='
 #CODE FROM DEVELOPMENT
 # output = {"is_data":True,
 # 	"skip_unproductive":True,
